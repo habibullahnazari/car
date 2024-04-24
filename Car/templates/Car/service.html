@@ -1,0 +1,85 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<!-- Start header -->
+<div class="all-page-title page-breadcrumb">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>Our services</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End header -->
+
+<!-- Start Menu -->
+<div class="menu-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Service</h2>
+					<p>{{allmessage.service_mes}}</p>
+				</div>
+			</div>
+		</div>
+
+
+		<style>
+			/* CSS styles specific to this page */
+
+
+			.container1 {
+				max-width: auto px;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: #fff;
+				border-radius: 8px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			h1,
+			h2 {
+				color: #333;
+			}
+
+			.service {
+				margin-bottom: 30px;
+				padding: 20px;
+				background-color: #f9f9f9;
+				border-radius: 8px;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+			}
+
+			.service img {
+				width: 100%;
+				border-radius: 8px;
+				margin-bottom: 10px;
+			}
+
+			/* Add more styles as needed */
+		</style>
+		<div class="container1">
+			<h1>Our Services</h1>
+			{%for item in service%}
+			<div class="service">
+				<img src="{{item.photo.url}}" alt="{{item.alt}}">
+				<h2>{{item.title}}</h2>
+				<p>{{item.description}}</p>
+				<!-- Add more details about Service 1 -->
+			</div>
+			{%endfor%}
+
+
+			<!-- Add more services as needed -->
+
+		</div>
+
+
+	</div>
+</div>
+</div>
+<!-- End Menu -->
+{%endblock%}

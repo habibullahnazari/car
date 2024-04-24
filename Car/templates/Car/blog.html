@@ -1,0 +1,61 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+
+<!-- Start All Pages -->
+<div class="all-page-title page-breadcrumb">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>Blog</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End All Pages -->
+
+<!-- Start blog -->
+<div class="blog-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Blog</h2>
+					<p>{{allmessage.blog_mes}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+
+			{%for item in posts%}
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="blog-box-inner">
+					<div class="blog-img-box">
+						<img class="img-fluid" src="{{item.photo.url}}" alt="{{item.alt}}">
+					</div>
+					<div class="blog-detail">
+						<h4>{{item.title}}</h4>
+						<ul>
+							<li><span>{{item.author}}</span></li>
+							<li>|</li>
+							<li><span>{{item.publish}}</span></li>
+						</ul>
+						<p>{{item.body|truncatechars:350}} </p>
+
+						<a class="btn btn-lg btn-circle btn-outline-new-white"
+							href="{%url 'Car:post_detail' item.id%}">Read More</a>
+					</div>
+				</div>
+
+			</div>
+			{%endfor%}
+
+		</div>
+
+	</div>
+</div>
+<!-- End blog -->
+<br><br><br><br>
+{%endblock%}
