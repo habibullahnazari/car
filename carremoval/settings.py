@@ -72,6 +72,7 @@ TEMPLATES = [
                 'Car.context_processors.all_head_des',
                 'Car.context_processors.about_context',
                 'Car.context_processors.services',
+                'Car.context_processors.allmeta',
 
             ],
         },

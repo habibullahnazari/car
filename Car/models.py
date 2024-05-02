@@ -203,7 +203,60 @@ class Service(models.Model):
     service_type = models.ForeignKey(
         Servicetype, on_delete=models.CASCADE, related_name='service_type')
     alt = models.CharField(
-        max_length=40, help_text='please meaning full name for photo',null=True,blank=True)
+        max_length=40, help_text='please meaning full name for photo', null=True, blank=True)
 
     def __str__(self):
         return self.title
+
+
+class AllMeta(models.Model):
+    about_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    about_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    about_meta_desc = models.CharField(max_length=160, null=True, blank=True,
+                                       help_text='meta description should be 155-160 character')
+    blog_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    blog_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    blog_meta_desc = models.CharField(
+        max_length=160, null=True, blank=True, help_text='meta description should be 155-160 character')
+
+    contact_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    contact_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    contact_meta_desc = models.CharField(
+        max_length=160, null=True, blank=True, help_text='meta description should be 155-160 character')
+
+    gallery_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    gallery_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    gallery_meta_desc = models.CharField(
+        max_length=160, null=True, blank=True, help_text='meta description should be 155-160 character')
+
+    quote_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    quote_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    quote_meta_desc = models.CharField(
+        max_length=160, null=True, blank=True, help_text='meta description should be 155-160 character')
+
+    index_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    index_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    index_meta_desc = models.CharField(
+        max_length=160, null=True, blank=True, help_text='meta description should be 155-160 character')
+
+    service_meta_title = models.CharField(
+        max_length=60, null=True, blank=True, help_text='meta title should be 50-60 character')
+    service_meta_keyword = models.CharField(
+        max_length=220, null=True, blank=True, help_text='meta keyword should be 10-20 meta keyword')
+    service_meta_desc = models.CharField(
+        max_length=160, null=True, blank=True, help_text='meta description should be 155-160 character')
+
+    def __str__(self):
+        return "all_meta"

@@ -35,3 +35,8 @@ def about_context(request):
 def services(request):
     all_services = Service.objects.all()
     return {'service': all_services}
+
+
+def allmeta(request):
+    all_metas = AllMeta.objects.first()
+    return {'all_meta': all_metas}

@@ -1,5 +1,13 @@
 {%extends 'base.html'%}
 {%load static%}
+{% block metadescription %}
+
+<title>{{all_meta.blog_meta_title}}</title>
+<meta name="keywords" content="{{all_meta.blog_meta_keyword}}">
+<meta name="description" content="{{all_meta.blog_meta_desc}}">
+
+
+{% endblock %}
 {%block content%}
 
 <!-- Start All Pages -->

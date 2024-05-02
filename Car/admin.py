@@ -12,6 +12,7 @@ admin.site.register(Stuff)
 admin.site.register(About)
 admin.site.register(Servicetype)
 admin.site.register(Service)
+admin.site.register(AllMeta)
 
 
 class ContactusAdmin(admin.ModelAdmin):

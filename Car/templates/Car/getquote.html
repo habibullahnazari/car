@@ -1,4 +1,13 @@
-{%extends 'base.html' %} {%load static%} {%block content%} <!-- Start All Pages -->
+{%extends 'base.html' %}
+{%load static%}
+{% block metadescription %}
+
+<title>{{all_meta.quote_meta_title}}</title>
+<meta name="keywords" content="{{all_meta.quote_meta_keyword}}">
+<meta name="description" content="{{all_meta.quote_meta_desc}}">
+
+{% endblock %}
+{%block content%} <!-- Start All Pages -->
 <style>
 	.containerc {
 		width: 70%;
